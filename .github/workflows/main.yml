@@ -1,0 +1,10 @@
+name: Main Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-webhook-workflow:
+    name: Call the On-Demand Webhook Workflow
+    uses: ./.github/workflows/ziti-webhook.yml
+    secrets: inherit
