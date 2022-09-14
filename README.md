@@ -1,17 +1,17 @@
 # webhookz
 
-Template repository for sending a GitHub webhook to a private server
+Template repository for sending a GitHub webhook to a private server with the [OpenZiti Webhook Action](https://github.com/marketplace/actions/ziti-webhook-action)
 
 ## Use this template repository
 
-Do this first: there's a button in the GitHub UI to "Use this template" which will give you a separate commit history based on this repo. Clone your new repo and follow the steps in the remaining sections of this readme.
+Do this first: there's a button in the GitHub UI to "Use this template" which will give you a separate commit history based on this repo. Clone your new repo and follow the steps below.
 
 ## Configure OpenZiti
 
 A private HTTP server is included in this repo. These steps will guide you run and publish the server so it can receive the GitHub webhook via OpenZiti.
 
-1. Sign up for a free account in the Ziti Edge Developer Sandbox (ZEDS) at https://zeds.openziti.org/. ZEDS will provide the OpenZiti network.
-1. In ZEDS, follow the "build your app" button to skip the guide. Populate the form with an app name like "my webhook app", two identities "github" and "server", and a service named "webhookz". Finish up with the "build my app" button.
+1. Sign up for a free account in the Ziti Edge Developer Sandbox (ZEDS) at https://zeds.openziti.org/. We'll create a couple of identities to attach to an OpenZiti network provided by ZEDS.
+1. In ZEDS, follow the "build your app" button. Populate the form with an app name like "my webhook app", two identities "github" and "server", and a service named "webhookz". Finish up with the "build my app" button.
 1. On the following screen click the edit button for the service "webhookz".
     1. Create a config with type `intercept.v1`.
 
@@ -63,3 +63,17 @@ A private HTTP server is included in this repo. These steps will guide you run a
    ```
 
    You should now have a new file "server.json" in the directory where you cloned this repo. That is the OpenZiti identity file used by the tunneler running in one of the containers.
+
+1. Finally, manually trigger the GitHub Actions workflow to demonstrate sending a GitHub webhook to your private server.
+
+## Extra data input
+
+A GitHub webhook normally contains the `github` context. There are a couple of ways to send additional data in the webhook such as workflow inputs or variables from a job. Check [the Marketplace page](https://github.com/marketplace/actions/ziti-webhook-action#extra-data-input) for more details.
+
+## Have questions?
+
+* Follow our [Blog](https://openziti.io/)
+* Join [Discussion](https://openziti.discourse.group)
+* [Development](https://github.com/openziti)
+* [Documentation](https://openziti.github.io)
+* Like it? Give us a [star](https://github.com/openziti/ziti)
