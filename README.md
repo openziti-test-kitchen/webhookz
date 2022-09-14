@@ -66,6 +66,12 @@ A private HTTP server is included in this repo. These steps will guide you run a
 
 1. Finally, manually trigger the GitHub Actions workflow to demonstrate sending a GitHub webhook to your private server.
 
+1. Optionally, follow the private server's log to see the webhook activity from GitHub
+
+    ```bash
+    docker compose logs --follow httpbin
+    ```
+
 ## Extra data input
 
 A GitHub webhook normally contains the `github` context. There are a couple of ways to send additional data in the webhook such as workflow inputs or variables from a job. Check [the Marketplace page](https://github.com/marketplace/actions/ziti-webhook-action#extra-data-input) for more details.
