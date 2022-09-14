@@ -1,0 +1,16 @@
+version: '3.6'
+
+services:
+  httpbin:
+    image: mccutchen/go-httpbin
+    # ports:
+    #   - "127.0.0.1:8080:8080/tcp"
+  ziti-host:
+    image: openziti/ziti-edge-tunnel
+    environment:
+    - NF_REG_NAME=server
+    volumes:
+    - .:/ziti-edge-tunnel
+    command:
+    - run-host
+    - --verbose=2
