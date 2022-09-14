@@ -1,7 +1,6 @@
 name: Ziti Webhook Workflow
 on:
   workflow_call:
-  workflow_dispatch:
 
 jobs:
   ziti-webhook:
