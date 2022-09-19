@@ -8,7 +8,7 @@ Do this first: there's a button in the GitHub UI to "Use this template" which wi
 
 ## Configure OpenZiti
 
-A private HTTP server is included in this repo. These steps will guide you run and publish the server so it can receive the GitHub webhook via OpenZiti.
+A private webhook server is included in this repo as a Docker Compose project. These steps will guide you run and publish the server so it can receive the GitHub webhook via OpenZiti.
 
 1. Sign up for a free account in the Ziti Edge Developer Sandbox (ZEDS) at https://zeds.openziti.org/. We'll create a couple of identities to attach to an OpenZiti network provided by ZEDS.
 1. In ZEDS, follow the "build your app" button. Populate the form with an app name like "my webhook app", two identities "github" and "server", and a service named "webhookz". Finish up with the "build my app" button.
@@ -59,7 +59,7 @@ A private HTTP server is included in this repo. These steps will guide you run a
 
    You should now have a new file "server.json" in the directory where you cloned this repo. That is the OpenZiti identity file used by the tunneler running in one of the containers.
 
-1. Finally, manually trigger the GitHub Actions workflow to demonstrate sending a GitHub webhook to your private server. Navigate to the workflow in the GitHub UI and punch the "Run workflow" button. You may instead trigger it with the GitHub CLI.
+1. Finally, trigger the GitHub Actions workflow to demonstrate sending a GitHub webhook to your private server. Navigate to the workflow in the GitHub UI and punch the "Run workflow" button. You may instead trigger it with the GitHub CLI.
 
     ```bash
     gh workflow run main.yml
