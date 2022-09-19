@@ -8,9 +8,9 @@ Do this first: there's a button in the GitHub UI to "Use this template" which wi
 
 ## Configure OpenZiti
 
-A private webhook server is included in this repo as a Docker Compose project. These steps will guide you run and publish the server so it can receive the GitHub webhook via OpenZiti.
+A private webhook server is included in this repo as a Docker Compose project. These steps will guide you run and publish the server so it can receive the GitHub webhook via OpenZiti. We'll use Ziti Edge Developer Sandbox (ZEDS) in this example, but you also have the option to self-host an OpenZiti Network by running [the quickstart](https://openziti.github.io/ziti/quickstarts/quickstart-overview.html).
 
-1. Sign up for a free account in the Ziti Edge Developer Sandbox (ZEDS) at https://zeds.openziti.org/. We'll create a couple of identities to attach to an OpenZiti network provided by ZEDS.
+1. Sign up for a free developer account at https://zeds.openziti.org/. We'll create a couple of identities to attach to an OpenZiti network provided by ZEDS.
 1. In ZEDS, follow the "build your app" button. Populate the form with an app name like "my webhook app", two identities "github" and "server", and a service named "webhookz". Finish up with the "build my app" button.
 1. On the following screen click the edit button for the service "webhookz".
     1. Create a config with type `intercept.v1`.
