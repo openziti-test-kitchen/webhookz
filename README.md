@@ -1,6 +1,6 @@
 # webhookz
 
-This repo sends a GitHub webhook to a private server with the [OpenZiti Webhook Action](https://github.com/marketplace/actions/ziti-webhook-action-python) over zero trust, private network based on [OpenZiti](https://github.com/openziti/ziti) ![GitHub Repo stars](https://img.shields.io/github/stars/openziti/ziti?style=social).
+This repo sends a GitHub webhook to a private server with the [OpenZiti Webhook Action](https://github.com/marketplace/actions/ziti-webhook-action-python) over a zero trust, private network based on [OpenZiti](https://github.com/openziti/ziti#readme) ![GitHub Repo stars](https://img.shields.io/github/stars/openziti/ziti?style=social).
 
 ## Use this template repository
 
