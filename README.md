@@ -2,6 +2,8 @@
 
 This repo sends a GitHub webhook to a private server with the [OpenZiti Webhook Action](https://github.com/marketplace/actions/ziti-webhook-action-python) over a zero trust, private network based on [OpenZiti](https://github.com/openziti/ziti#readme) ![GitHub Repo stars](https://img.shields.io/github/stars/openziti/ziti?style=social).
 
+![webhookz drawio](https://user-images.githubusercontent.com/1434400/191099368-64161664-1c81-4f99-8020-e6bf5ae10adb.svg)
+
 ## Use this template repository
 
 Do this first: there's a button in the GitHub UI to "Use this template" which will give you a separate commit history based on this repo. Clone your new repo and follow the steps below.
