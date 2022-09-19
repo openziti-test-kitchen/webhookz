@@ -1,6 +1,6 @@
 # webhookz
 
-Template repository for sending a GitHub webhook to a private server with the [OpenZiti Webhook Action](https://github.com/marketplace/actions/ziti-webhook-action)
+Template repository for sending a GitHub webhook to a private server with the [OpenZiti Webhook Action](https://github.com/marketplace/actions/ziti-webhook-action-py)
 
 ## Use this template repository
 
@@ -51,11 +51,6 @@ A private HTTP server is included in this repo. These steps will guide you run a
     ```
 
 1. In the GitHub UI, create a new GitHub Actions secret named `ZITI_WEBHOOK_ACTION_ID` with the contents of "github.json".
-1. Create another GitHub Actions secret named `ZITI_WEBHOOK_SECRET` with a long, random string. You may generate the string with Python:
-
-    ```bash
-    python -c "import os, binascii; print(binascii.hexlify(os.urandom(20)).decode('utf-8'))"
-    ```
 1. In your terminal, run the Docker Compose project to start the demo webhook server and OpenZiti tunneler.
 
    ```bash
@@ -64,17 +59,17 @@ A private HTTP server is included in this repo. These steps will guide you run a
 
    You should now have a new file "server.json" in the directory where you cloned this repo. That is the OpenZiti identity file used by the tunneler running in one of the containers.
 
-1. Finally, manually trigger the GitHub Actions workflow to demonstrate sending a GitHub webhook to your private server.
+1. Finally, manually trigger the GitHub Actions workflow to demonstrate sending a GitHub webhook to your private server. Navigate to the workflow in the GitHub UI and punch the "Run workflow" button. You may instead trigger it with the GitHub CLI.
+
+    ```bash
+    gh workflow run main.yml
+    ```
 
 1. Optionally, follow the private server's log to see the webhook activity from GitHub
 
     ```bash
     docker compose logs --follow httpbin
     ```
-
-## Extra data input
-
-A GitHub webhook normally contains the `github` context. There are a couple of ways to send additional data in the webhook such as workflow inputs or variables from a job. Check [the Marketplace page](https://github.com/marketplace/actions/ziti-webhook-action#extra-data-input) for more details.
 
 ## Have questions?
 
