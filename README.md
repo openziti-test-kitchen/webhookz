@@ -1,6 +1,6 @@
 # webhookz
 
-Template repository for sending a GitHub webhook to a private server with the [OpenZiti Webhook Action](https://github.com/marketplace/actions/ziti-webhook-action-py)
+Template repository for sending a GitHub webhook to a private server with the [OpenZiti Webhook Action](https://github.com/marketplace/actions/ziti-webhook-action-python)
 
 ## Use this template repository
 
