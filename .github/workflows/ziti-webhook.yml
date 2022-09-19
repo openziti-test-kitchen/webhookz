@@ -13,5 +13,7 @@ jobs:
         env:
           ZITI_WEBHOOK_ACTION_ID: ${{ secrets.ZITI_WEBHOOK_ACTION_ID }}
         with:
-          ziti-id: ${{ secrets.ZITI_WEBHOOK_ACTION_ID }}
-          webhook-url: http://webhookz.ziti/post
+          zitiId: ${{ secrets.ZITI_WEBHOOK_ACTION_ID }}
+          webhookUrl: http://webhookz.ziti/post
+          # webhookUrl: http://httpbin.ziti/post
+          eventJson: ${{ toJson(github.event) }}
