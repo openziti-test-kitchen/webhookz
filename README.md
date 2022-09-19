@@ -50,7 +50,7 @@ A private webhook server is included in this repo as a Docker Compose project. T
     docker run --rm --volume ${PWD}:/mnt/ openziti/quickstart /openziti/ziti-bin/ziti edge enroll /mnt/github.jwt 
     ```
 
-1. In the GitHub UI, create a new GitHub Actions secret named `ZITI_WEBHOOK_ACTION_ID` with the contents of "github.json".
+1. In the GitHub UI, create a new GitHub Actions secret named `ZITI_WEBHOOK_IDENTITY` with the contents of "github.json".
 1. In your terminal, run the Docker Compose project to start the demo webhook server and OpenZiti tunneler.
 
    ```bash

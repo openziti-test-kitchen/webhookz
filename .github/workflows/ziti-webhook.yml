@@ -8,12 +8,11 @@ jobs:
     name: Ziti Webhook Job
     steps:
       - name: Send Webhook
-        uses: openziti/ziti-webhook-action-py@main
-        if: ${{ env.ZITI_WEBHOOK_ACTION_ID != null }}
+        uses: openziti/ziti-webhook-action-py@v1
+        if: ${{ env.ZITI_WEBHOOK_IDENTITY != null }}
         env:
-          ZITI_WEBHOOK_ACTION_ID: ${{ secrets.ZITI_WEBHOOK_ACTION_ID }}
+          ZITI_WEBHOOK_IDENTITY: ${{ secrets.ZITI_WEBHOOK_IDENTITY }}
         with:
-          zitiId: ${{ secrets.ZITI_WEBHOOK_ACTION_ID }}
+          zitiId: ${{ secrets.ZITI_WEBHOOK_IDENTITY }}
           webhookUrl: http://webhookz.ziti/post
-          # webhookUrl: http://httpbin.ziti/post
           eventJson: ${{ toJson(github.event) }}
