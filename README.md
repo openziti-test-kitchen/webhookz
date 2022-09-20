@@ -120,7 +120,7 @@ A private webhook server is included in this repo as a Docker Compose project to
 
    You should now have a new file "server.json" in the directory where you cloned this repo. That is the OpenZiti identity file used by the tunneler running in one of the containers.
 
-1. Finally, trigger the GitHub Actions workflow to demonstrate sending a GitHub webhook to your private server. Navigate to the workflow in the GitHub UI and punch the "Run workflow" button. You may instead trigger it with the GitHub CLI.
+1. Finally, trigger the GitHub Actions workflow to demonstrate sending a GitHub webhook to your private server. Navigate to "Actions" / "Main Workflow" in the GitHub UI and punch the "Run workflow" button. You may instead trigger it with the GitHub CLI if your current directory is repo.
 
     ```bash
     gh workflow run main.yml
