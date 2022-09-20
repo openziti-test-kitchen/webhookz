@@ -25,7 +25,7 @@ With that zero trust overlay in place you can follow these steps on your OpenZit
 1. Create an identity for the webhook server
 
     ```bash
-    ziti edge create identity device github --jwt-output-file github.jwt --role-attributes webhookz-servers
+    ziti edge create identity device server --jwt-output-file server.jwt --role-attributes webhookz-servers
     ```
 
 1. Create a config with type `intercept.v1`.
