@@ -8,7 +8,7 @@ jobs:
     name: Ziti Webhook Job
     steps:
       - name: Send Webhook
-        uses: openziti/ziti-webhook-action@v2
+        uses: openziti/ziti-webhook-action@bump-node-sdk
         if: ${{ env.ZITI_WEBHOOK_SECRET != null }}
         env:
           ZITI_WEBHOOK_SECRET: ${{ secrets.ZITI_WEBHOOK_SECRET }}
