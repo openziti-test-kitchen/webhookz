@@ -12,6 +12,7 @@ jobs:
         if: ${{ env.ZITI_WEBHOOK_SECRET != null }}
         env:
           ZITI_WEBHOOK_SECRET: ${{ secrets.ZITI_WEBHOOK_SECRET }}
+          ZITI_LOG: 4
         with:
           ziti-id: ${{ secrets.ZITI_WEBHOOK_ACTION_ID }}
           webhook-url: http://webhookz.ziti/post
