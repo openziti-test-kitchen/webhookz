@@ -16,5 +16,5 @@ jobs:
           ZITI_NODEJS_LOG: 4
         with:
           ziti-id: ${{ secrets.ZITI_WEBHOOK_ACTION_ID }}
-          webhook-url: http://httpbin.ziti/post
+          webhook-url: http://webhookz.ziti/post?foo=bar
           webhook-secret: ${{ secrets.ZITI_WEBHOOK_SECRET }}
